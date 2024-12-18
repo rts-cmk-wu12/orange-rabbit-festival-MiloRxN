@@ -2,6 +2,7 @@ import { useRoutes } from 'react-router';
 import routes from '~react-pages';
 
 import './sass/reset.scss'
+import './sass/style.scss'
 
 function App() {
 

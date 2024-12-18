@@ -1,32 +1,33 @@
-*{
-    box-sizing: border-box;
-}
-   
+@use '../sass/colors.scss';
 
-.signup-form{
-
+.signup {
     display: flex;
     flex-direction: column;
-    max-width: 16rem;
-    gap: .5rem;
-    padding: 1rem;
-    border: 1px solid #000;
-    border-radius: 1rem;
-    background-color: teal;
-    
-    &__input{
-        border: 1px solid #000;
-        padding: .5rem;
-        border-radius: .5rem;
+
+    &-form {
+
+        // display: flex;
+        // flex-direction: column;
+        min-width: 20rem;
+        max-width: 25rem;
+        // gap: .5rem;
+        // padding: 1rem 2rem;
+        // // border-radius: 1rem;
+        background-color: colors.$primaryBackground-color;
+        border-top: 3px dotted rgba(colors.$secondaryNeutral-color, .1);
+        padding: 2rem;
+
+        &__input {
+            border: 1px solid #000;
+            padding: .5rem;
+            border-radius: .5rem;
+        }
+
+        &__button {
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            border: 1px solid #000;
+        }
     }
 
-    &__button{
-        padding: 0.5rem;
-        border-radius: 0.5rem;
-        border: 1px solid #000;
-    }
-    &__error{
-        margin: 0;
-    }
 }
-

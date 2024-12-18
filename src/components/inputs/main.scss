@@ -1,9 +1,44 @@
+@use '/src/sass/colors.scss';
+
 .input-wrapper {
-    min-height: 3.3rem;
+    min-height: 5.5rem;
     display: block;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
 
     input {
         width: 100%;
         display: block;
+        background-color: #FCFCFD;
+        border: 1px solid #ccc;
+        padding: 0.5rem;
+        border-radius: 4px;
+
+        &:focus {
+            outline: none;
+            border-color: colors.$secondaryNeutral-color;
+        }
+
+        &.error {
+            border-color: colors.$error-color;
+        }
+
+        &.correct {
+            border-color: colors.$correct-color;
+        }
+    }
+
+    .message {
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+
+        &.error {
+            color: #dc3545;
+        }
+
+        &.correct {
+            color: #28a745;
+        }
     }
 }

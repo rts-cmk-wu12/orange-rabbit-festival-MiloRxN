@@ -14,21 +14,3 @@ img {
 html, body, .contentContainer, #root{
     height: 100%;
 }
-
-body{
-    background-image: url(public/bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.contentContainer {
-    backdrop-filter: blur(7px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.mediumImage{
-    width: 30rem;
-    margin: 0;
-}
