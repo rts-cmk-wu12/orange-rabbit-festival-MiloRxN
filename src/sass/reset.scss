@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+html, body, .contentContainer, #root{
+    height: 100%;
+}
+
+body{
+    background-image: url(public/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contentContainer {
+    backdrop-filter: blur(7px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mediumImage{
+    width: 30rem;
+    margin: 0;
+}

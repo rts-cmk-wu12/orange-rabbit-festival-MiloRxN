@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+   
+
+.signup-form{
+
+    display: flex;
+    flex-direction: column;
+    max-width: 16rem;
+    gap: .5rem;
+    padding: 1rem;
+    border: 1px solid #000;
+    border-radius: 1rem;
+    background-color: teal;
+    
+    &__input{
+        border: 1px solid #000;
+        padding: .5rem;
+        border-radius: .5rem;
+    }
+
+    &__button{
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        border: 1px solid #000;
+    }
+    &__error{
+        margin: 0;
+    }
+}
+
