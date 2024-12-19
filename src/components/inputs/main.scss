@@ -1,11 +1,16 @@
 @use '/src/sass/colors.scss';
 
 .input-wrapper {
-    min-height: 5.5rem;
+    min-height: 5.8rem;
     display: block;
     display: flex;
     flex-direction: column;
     gap: .5rem;
+
+    .signup-form__error {
+        font-size: 0.75rem; // smaller font size
+        color: colors.$error-color; // red color
+    }
 
     input {
         width: 100%;
@@ -29,16 +34,4 @@
         }
     }
 
-    .message {
-        font-size: 0.875rem;
-        margin-top: 0.25rem;
-
-        &.error {
-            color: #dc3545;
-        }
-
-        &.correct {
-            color: #28a745;
-        }
-    }
 }

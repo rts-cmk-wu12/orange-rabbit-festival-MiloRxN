@@ -30,7 +30,7 @@ export function useInputHandler() {
                 setInputClass('error');
                 setMessageClass('error');
             } else if (!nameRegex.test(value)) {
-                setError('Full Name must contain at least a first and last name, each with at least two alphabetic characters.');
+                setError('Full Name must contain at least a first and last name with at least two characters each.');
                 setInputClass('error');
                 setMessageClass('error');
             } else {
