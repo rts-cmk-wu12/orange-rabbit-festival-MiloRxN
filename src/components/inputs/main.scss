@@ -1,0 +1,36 @@
+@use '/src/sass/colors.scss';
+
+.input-wrapper {
+    min-height: 5.8rem;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    .signup-form__error {
+        font-size: 0.75rem; 
+        color: colors.$error-color; 
+    }
+
+    input {
+        display: block;
+        background-color: #FCFCFD;
+        border: 1px solid #ccc;
+        padding: 0.5rem;
+        border-radius: 4px;
+
+        &:focus {
+            outline: none;
+            border-color: colors.$secondaryNeutral-color;
+        }
+
+        &.error {
+            border-color: colors.$error-color;
+        }
+
+        &.correct {
+            border-color: colors.$correct-color;
+        }
+    }
+
+}

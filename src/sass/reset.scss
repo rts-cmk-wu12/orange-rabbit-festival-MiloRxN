@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+}
+
+html, body, .contentContainer, #root{
+    height: 100%;
+}
