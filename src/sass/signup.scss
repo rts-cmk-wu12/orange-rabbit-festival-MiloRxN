@@ -1,0 +1,220 @@
+@use '../sass/colors.scss';
+
+$Border-color: #000;
+
+.signup {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__header {
+        padding: 2rem;
+        background-color: colors.$primaryBackground-color;
+
+
+        &__subheading {
+            font-size: 0.7rem;
+            color: colors.$primaryTypography-color;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        &__title {
+            font-size: 1.2rem;
+            color: colors.$primaryTypography-color;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        &__details {
+            font-size: 0.7rem;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            color: colors.$primaryTypography-color;
+
+            p {
+                display: flex;
+                align-items: center;
+
+                .signup__icon {
+                    font-size: 1.25rem;
+                    margin: 0 0.5rem 0 0;
+                }
+            }
+        }
+    }
+
+    &-form {
+        height: 100%;
+        background-color: colors.$primaryBackground-color;
+        border-top: 1px dotted rgba(colors.$secondaryNeutral-color, .1);
+        padding: 1rem 2rem 2rem 2rem;
+
+        &__input {
+            border: 1px solid $Border-color;
+            padding: .5rem;
+            border-radius: .5rem;
+        }
+
+        &__button {
+            padding: .3rem 2rem;
+            border: none;
+            border-radius: 2rem;
+            background-color: colors.$secondaryBackground-color;
+            color: colors.$primaryNeutral-color;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+
+        &__icon {
+            font-size: 1.5rem;
+        }
+    }
+
+}
+
+
+.participants {
+    background-color: colors.$primaryBackground-color;
+    position: relative;
+    overflow: hidden;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        border-bottom: 1px dotted rgba(colors.$secondaryNeutral-color, .1);
+    }
+
+    &__heading {
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: colors.$primaryTypography-color;
+    }
+
+    &__count {
+        color: colors.$primaryTypography-color;
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    &__list {
+        list-style: none;
+        overflow-y: auto;
+        max-height: calc(100% - 170px);
+        scrollbar-width: none;
+        flex-grow: 1;
+
+        &-message {
+            padding: 2rem 0 0 2rem;
+        }
+
+    }
+
+    &__item {
+        border-bottom: 1px solid rgba(colors.$secondaryNeutral-color, .1);
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: .25rem;
+        position: relative;
+
+    }
+
+    &__name {
+        color: colors.$primaryTypography-color;
+        text-transform: capitalize;
+    }
+
+    &__birthdate,
+    &__email,
+    &__phone {
+        display: flex;
+        justify-content: space-between;
+        color: rgba(colors.$primaryTypography-color, .5);
+        font-size: .75rem;
+        font-weight: bold;
+    }
+
+    &__delete-button {
+        position: absolute;
+        right: .5rem;
+        top: 1rem;
+    }
+
+    &__submit-button {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        display: flex;
+        background-color: colors.$secondaryBackground-color;
+        color: colors.$primaryNeutral-color;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 0.75rem;
+        position: absolute;
+        bottom: 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+.confirmation {
+    display: flex;
+    flex-direction: column;
+    background-color: colors.$primaryBackground-color;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    padding: 7rem 2rem 7rem 2rem;
+    &__icon{
+        height: 50px;
+    }
+    &__smallHeading{
+        font-size: 0.7rem;
+        color: colors.$primaryTypography-color;
+        margin-top: 0.75rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    &__heading{
+        font-size: 1.25rem;
+        color: colors.$primaryTypography-color;
+        font-weight: bold;
+    }
+    &__message{
+        color: colors.$primaryTypography-color;
+        margin-top: 1rem;
+    }
+    &__button{
+        padding: 1.25rem 3rem;
+        border: none;
+        border-radius: 2rem;
+        background-color: colors.$secondaryBackground-color;
+        color: colors.$primaryNeutral-color;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        margin-top: 1rem;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+}
+
+
+
+//  <div className="confirmation">
+//                     <img className="confirmation__icon" src={confirmationIcon} alt="confirmation icon" />
+//                     <p className="confirmation__smallHeading">confirmation</p>
+//                     <h1 className="confirmation__heading">Signup complete</h1>
+
+//                     <p className="confirmation__message">We look forward seeing you at the event</p>
+//                     <button className="confirmation__button">Order more tickets</button>
+
+//                 </div>
