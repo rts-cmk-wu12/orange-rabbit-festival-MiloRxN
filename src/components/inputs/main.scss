@@ -8,12 +8,11 @@
     gap: .5rem;
 
     .signup-form__error {
-        font-size: 0.75rem; // smaller font size
-        color: colors.$error-color; // red color
+        font-size: 0.75rem; 
+        color: colors.$error-color; 
     }
 
     input {
-        width: 100%;
         display: block;
         background-color: #FCFCFD;
         border: 1px solid #ccc;

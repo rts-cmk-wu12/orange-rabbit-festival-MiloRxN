@@ -1,10 +1,14 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export function useInputHandler() {
     const inputReference = useRef(null);
-    const [error, setError] = useState(null);
+    const [error, setError] = useState('');
     const [inputClass, setInputClass] = useState('');
     const [messageClass, setMessageClass] = useState('');
+
+    useEffect(() => {
+        inputReference.current.setCustomValidity(error)
+    }, [error])
 
     function inputHandler(event) {
         let value = inputReference.current.value;
@@ -18,7 +22,7 @@ export function useInputHandler() {
                 setInputClass('error');
                 setMessageClass('error');
             } else {
-                setError(null);
+                setError('');
                 setInputClass('correct');
                 setMessageClass('correct');
             }
@@ -34,7 +38,7 @@ export function useInputHandler() {
                 setInputClass('error');
                 setMessageClass('error');
             } else {
-                setError(null);
+                setError('');
                 setInputClass('correct');
                 setMessageClass('correct');
             }
@@ -54,7 +58,7 @@ export function useInputHandler() {
                     setInputClass('error');
                     setMessageClass('error');
                 } else {
-                    setError(null);
+                    setError('');
                     setInputClass('correct');
                     setMessageClass('correct');
                 }
@@ -66,7 +70,7 @@ export function useInputHandler() {
                 setInputClass('error');
                 setMessageClass('error');
             } else {
-                setError(null);
+                setError('');
                 setInputClass('correct');
                 setMessageClass('correct');
             }
@@ -90,7 +94,7 @@ export function useInputHandler() {
                 setInputClass('error');
                 setMessageClass('error');
             } else {
-                setError(null);
+                setError('');
                 setInputClass('correct');
                 setMessageClass('correct');
             }

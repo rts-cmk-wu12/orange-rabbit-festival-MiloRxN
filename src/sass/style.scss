@@ -1,18 +1,73 @@
 body {
-    background-image: url(/bg.png);
-    background-repeat: no-repeat;
+    background-color: black;
+}
+
+body::before {
+    content: '';
+    background-image: url('/bg.png');
+    position: absolute;
     background-size: cover;
+    filter: blur(10px);
+    min-height: 100vh;
+    width: 100vw;
+    z-index: -1;
 }
 
 .contentContainer {
-    backdrop-filter: blur(7px);
     display: flex;
+    flex-direction: column;
+    padding: 3rem;
     justify-content: center;
-    align-items: center;
-
 }
 
-.mediumImage {
-    height: 70%;
+.image {
+    aspect-ratio: 1;
+    object-fit: cover;
     margin: 0;
+    max-width: 60rem;
+}
+
+.signup-container {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+
+    &> :nth-child(2) {
+        flex: 0 0 40%;
+    }
+}
+
+@media (min-width: 768px) {
+    .contentContainer {
+        flex-direction: row;
+    }
+
+    .signup-container {
+        flex: 1;
+    }
+
+    .image {
+        flex: 1;
+    }
+}
+
+@media (max-width: 767px) {
+    .contentContainer {
+        padding: 1rem;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .signup-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .participants{
+        width: 100%;
+    }
+
+    .image {
+        max-width: 100%;
+    }
 }
